@@ -1001,8 +1001,25 @@ enum nss_status _nss_tacplus_getpwuid_r(uid_t uid,struct passwd *pw,
                                         int *errnop)
 {
   syslog(LOG_INFO, "Returning NSS_STATUS_SUCCESS for getpwuid_r");
-
   return NSS_STATUS_SUCCESS;
+}
+
+enum nss_status _nss_tacplus_getpwent()
+{
+    syslog(LOG_INFO, "Returning NSS_STATUS_SUCCESS for getpwent");
+    return NSS_STATUS_SUCCESS;
+}
+
+enum nss_status _nss_tacplus_setpwent()
+{
+    syslog(LOG_INFO, "Returning NSS_STATUS_SUCCESS for setpwent");
+    return NSS_STATUS_SUCCESS;
+}
+
+enum nss_status _nss_tacplus_endpwent()
+{
+    syslog(LOG_INFO, "Returning NSS_STATUS_SUCCESS for endpwent");
+    return NSS_STATUS_SUCCESS;
 }
 
 /**
