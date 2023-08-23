@@ -996,6 +996,15 @@ buffer_full:
     return NSS_STATUS_TRYAGAIN;
 }
 
+enum nss_status _nss_tacplus_getpwuid_r(uid_t uid,struct passwd *pw,
+                                        char *buffer, size_t buflen,
+                                        int *errnop)
+{
+  syslog(LOG_INFO, "Returning NSS_STATUS_SUCCESS for getpwuid_r");
+
+  return NSS_STATUS_SUCCESS;
+}
+
 /**
  * ... document me ...
  */
