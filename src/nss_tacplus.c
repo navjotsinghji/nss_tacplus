@@ -1011,12 +1011,6 @@ enum nss_status _nss_tacplus_getpwent_r(struct passwd *pwbuf, char *buf,
     return NSS_STATUS_SUCCESS;
 }
 
-enum nss_status _nss_tacplus_getpwent()
-{
-    syslog(LOG_INFO, "Returning NSS_STATUS_SUCCESS for getpwent");
-    return NSS_STATUS_SUCCESS;
-}
-
 enum nss_status _nss_tacplus_setpwent()
 {
     syslog(LOG_INFO, "Returning NSS_STATUS_SUCCESS for setpwent");
@@ -1028,6 +1022,32 @@ enum nss_status _nss_tacplus_endpwent()
     syslog(LOG_INFO, "Returning NSS_STATUS_SUCCESS for endpwent");
     return NSS_STATUS_SUCCESS;
 }
+
+enum nss_status _nss_tacplus_getgrnam_r()
+{
+    syslog(LOG_INFO, "Returning NSS_STATUS_SUCCESS for getgrnam_r");
+    return NSS_STATUS_SUCCESS;
+} 
+enum nss_status _nss_tacplus_getgrgid_r()
+{
+    syslog(LOG_INFO, "Returning NSS_STATUS_SUCCESS for getgrgid_r");
+    return NSS_STATUS_SUCCESS;
+} 
+enum nss_status _nss_tacplus_setgrent()
+{
+    syslog(LOG_INFO, "Returning NSS_STATUS_SUCCESS for setgrent");
+    return NSS_STATUS_SUCCESS;
+} 
+enum nss_status _nss_tacplus_getgrent_r()
+{
+    syslog(LOG_INFO, "Returning NSS_STATUS_SUCCESS for getgrent_r ");
+    return NSS_STATUS_SUCCESS;
+}
+enum nss_status _nss_tacplus_endgrent()
+{
+    syslog(LOG_INFO, "Returning NSS_STATUS_SUCCESS for endgrent");
+    return NSS_STATUS_SUCCESS;
+} 
 
 /**
  * ... document me ...
